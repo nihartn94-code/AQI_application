@@ -1,0 +1,6 @@
+{
+  "name": "Smart Air Quality Monitor",
+  "description": "Real-time air quality monitoring with ESP32 Bluetooth Classic telemetry, MQ135 gas, dust density, GPS mapping, and AI analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

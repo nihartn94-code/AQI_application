@@ -1,0 +1,34 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Air Flow Waves -->
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M32,40 C38,36 44,36 50,40 C56,44 62,44 68,40 C72,37.3 75,37 78,38 C79.1,38.4 80,39.5 80,40.7 C80,42.4 78.4,43.7 76.7,43.3 C74.5,42.8 72,43.2 69.5,44.9 C62.3,49.7 54.7,49.7 47.5,44.9 C42.5,41.5 37.5,41.5 32.5,44.9 C31.1,45.8 29.2,45.3 28.3,43.9 C27.4,42.5 27.9,40.6 29.3,39.7 C30.2,39.1 31.1,40.5 32,40 Z" />
+
+    <!-- Pure Air Leaf & Shield Motif -->
+    <path
+        android:fillColor="#00E676"
+        android:pathData="M54,32 C66,32 74,42 74,56 C74,70 62,76 54,80 C46,76 34,70 34,56 C34,42 42,32 54,32 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,38 C63,38 69,46 69,56 C69,67 59,72 54,75 C49,72 39,67 39,56 C39,46 45,38 54,38 Z" />
+
+    <!-- Sensor Core / Leaf vein -->
+    <path
+        android:fillColor="#00C853"
+        android:pathData="M54,44 L54,68 M54,52 L61,48 M54,58 L47,54 M54,62 L61,58"
+        android:strokeWidth="2.8"
+        android:strokeColor="#00C853"
+        android:strokeLineCap="round" />
+
+    <!-- Digital Sensor Pulse Rings -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:pathData="M30,56 C30,42.7 40.7,32 54,32 M78,56 C78,69.3 67.3,80 54,80" />
+</vector>
