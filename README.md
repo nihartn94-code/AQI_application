@@ -71,7 +71,7 @@ The ESP32 transmits standard comma-delimited CSV packets over Bluetooth Serial (
 
 ```text
 temp,hum,gas,dust,aqi,lat,lon,alt,speed,sat
-25.4,52.1,310,42.5,75,37.7749,-122.4194,15.2,0.4,8
+25.4,52.1,310,42.5,75,13.0330048,77.5979889,920.0,0.0,9
 ```
 
 ---

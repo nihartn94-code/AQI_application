@@ -226,8 +226,8 @@ class Esp32BluetoothManager(
             var hum = 58.2
             var gasVal = 380
             var dust = 28.5
-            val baseLat = 37.774929
-            val baseLng = -122.419416
+            val baseLat = 13.0330048
+            val baseLng = 77.5979889
 
             while (isActive && _isDemoMode.value) {
                 step++
@@ -250,9 +250,9 @@ class Esp32BluetoothManager(
                     else -> "HAZARDOUS"
                 }
 
-                // Simulate slight GPS drift
-                val curLat = baseLat + (Random.nextDouble(-0.0004, 0.0004))
-                val curLng = baseLng + (Random.nextDouble(-0.0004, 0.0004))
+                // Simulate slight GPS drift around 13.0330048, 77.5979889
+                val curLat = if (step == 1) baseLat else baseLat + (Random.nextDouble(-0.00002, 0.00002))
+                val curLng = if (step == 1) baseLng else baseLng + (Random.nextDouble(-0.00002, 0.00002))
 
                 val simulatedData = AirQualityData(
                     temperature = Math.round(temp * 100.0) / 100.0,
@@ -261,11 +261,11 @@ class Esp32BluetoothManager(
                     dust = Math.round(dust * 100.0) / 100.0,
                     aqi = calcAqi,
                     airQuality = airQualityStr,
-                    latitude = curLat,
-                    longitude = curLng,
-                    altitude = 24.5,
+                    latitude = Math.round(curLat * 10000000.0) / 10000000.0,
+                    longitude = Math.round(curLng * 10000000.0) / 10000000.0,
+                    altitude = 920.0,
                     speed = 0.0,
-                    satellites = 8,
+                    satellites = 9,
                     timestamp = System.currentTimeMillis()
                 )
 

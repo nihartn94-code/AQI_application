@@ -225,13 +225,13 @@ class AirQualityViewModel(application: Application) : AndroidViewModel(applicati
         viewModelScope.launch {
             val now = System.currentTimeMillis()
             val samplePoints = listOf(
-                AirQualityData(temperature = 24.2, humidity = 56.0, gas = 210, dust = 18.5, aqi = 42, airQuality = "Good", timestamp = now - 18 * 60 * 1000),
-                AirQualityData(temperature = 24.5, humidity = 55.4, gas = 235, dust = 24.0, aqi = 48, airQuality = "Good", timestamp = now - 15 * 60 * 1000),
-                AirQualityData(temperature = 24.8, humidity = 54.8, gas = 290, dust = 39.5, aqi = 65, airQuality = "Moderate", timestamp = now - 12 * 60 * 1000),
-                AirQualityData(temperature = 25.1, humidity = 53.9, gas = 380, dust = 62.0, aqi = 88, airQuality = "Moderate", timestamp = now - 9 * 60 * 1000),
-                AirQualityData(temperature = 25.6, humidity = 52.0, gas = 460, dust = 94.2, aqi = 118, airQuality = "Unhealthy for Sensitive Groups", timestamp = now - 6 * 60 * 1000),
-                AirQualityData(temperature = 25.3, humidity = 53.1, gas = 340, dust = 52.8, aqi = 78, airQuality = "Moderate", timestamp = now - 3 * 60 * 1000),
-                AirQualityData(temperature = 25.0, humidity = 54.0, gas = 265, dust = 29.4, aqi = 54, airQuality = "Moderate", timestamp = now)
+                AirQualityData(temperature = 24.2, humidity = 56.0, gas = 210, dust = 18.5, aqi = 42, airQuality = "Good", latitude = 13.0330048, longitude = 77.5979889, altitude = 920.0, satellites = 9, timestamp = now - 18 * 60 * 1000),
+                AirQualityData(temperature = 24.5, humidity = 55.4, gas = 235, dust = 24.0, aqi = 48, airQuality = "Good", latitude = 13.0330048, longitude = 77.5979889, altitude = 920.0, satellites = 9, timestamp = now - 15 * 60 * 1000),
+                AirQualityData(temperature = 24.8, humidity = 54.8, gas = 290, dust = 39.5, aqi = 65, airQuality = "Moderate", latitude = 13.0330048, longitude = 77.5979889, altitude = 920.0, satellites = 9, timestamp = now - 12 * 60 * 1000),
+                AirQualityData(temperature = 25.1, humidity = 53.9, gas = 380, dust = 62.0, aqi = 88, airQuality = "Moderate", latitude = 13.0330048, longitude = 77.5979889, altitude = 920.0, satellites = 9, timestamp = now - 9 * 60 * 1000),
+                AirQualityData(temperature = 25.6, humidity = 52.0, gas = 460, dust = 94.2, aqi = 118, airQuality = "Unhealthy for Sensitive Groups", latitude = 13.0330048, longitude = 77.5979889, altitude = 920.0, satellites = 9, timestamp = now - 6 * 60 * 1000),
+                AirQualityData(temperature = 25.3, humidity = 53.1, gas = 340, dust = 52.8, aqi = 78, airQuality = "Moderate", latitude = 13.0330048, longitude = 77.5979889, altitude = 920.0, satellites = 9, timestamp = now - 3 * 60 * 1000),
+                AirQualityData(temperature = 25.0, humidity = 54.0, gas = 265, dust = 29.4, aqi = 54, airQuality = "Moderate", latitude = 13.0330048, longitude = 77.5979889, altitude = 920.0, satellites = 9, timestamp = now)
             )
             for (point in samplePoints) {
                 repository.saveReading(point)
