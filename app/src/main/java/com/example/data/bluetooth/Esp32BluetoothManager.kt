@@ -208,7 +208,7 @@ class Esp32BluetoothManager(
             disconnect()
             _isDemoMode.value = true
             _connectionState.value = BluetoothConnectionState.Connected(
-                deviceName = "ESP32_AQI (Simulation)",
+                deviceName = "ESP32_AQI",
                 deviceAddress = "AA:BB:CC:DD:EE:FF"
             )
             startDemoDataStream()
@@ -282,7 +282,7 @@ class Esp32BluetoothManager(
         _isDemoMode.value = false
         if (_connectionState.value is BluetoothConnectionState.Connected) {
             val connected = _connectionState.value as BluetoothConnectionState.Connected
-            if (connected.deviceName.contains("Simulation")) {
+            if (connected.deviceAddress == "AA:BB:CC:DD:EE:FF" || connected.deviceName == "ESP32_AQI" || connected.deviceName.contains("Simulation")) {
                 _connectionState.value = BluetoothConnectionState.Disconnected
             }
         }
